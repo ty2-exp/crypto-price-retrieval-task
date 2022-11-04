@@ -66,17 +66,19 @@ Endpoints:
     - ts (required): timestamp in unix time format
 - /api/v1/average
   - query strings:
-      - from (required): from timestamp in unix time format
-      - until (required): until timestamp in unix time format
-      - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
+    - from (required): from timestamp in unix time format
+    - until (required): until timestamp in unix time format
+    - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
 
 #### datasource
 Endpoints:
 - /api/v1/price
     - query strings:
-        - ts (required): timestamp in unix time format
+      - symbol (required): crypto trading pair (e.g. BTCUSD, ETHUSD)
+      - ts (required): timestamp in unix time format
 - /api/v1/average
     - query strings:
-        - from (required): from timestamp in unix time format
-        - until (required): until timestamp in unix time format
-        - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
+      - symbol (required): crypto trading pair (e.g. BTCUSD, ETHUSD)
+      - from (required): from timestamp in unix time format
+      - until (required): until timestamp in unix time format
+      - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
