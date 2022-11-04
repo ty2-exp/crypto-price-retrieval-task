@@ -34,9 +34,9 @@ make build-n-up
 
 ### Retrieve Price Data via Datasource Gateway HTTP APIs
 open browser and enter the urls:
-- price: `http://172.88.0.11/api/v1/price?ts=1667457091`
-- average: `http://172.88.0.11/api/v1/average?&from=1569484800&until=1569492000&granularity=1s`  
-<sup>The IP is defined in docker-compose.yaml</sup>
+- price: `http://127.0.0.1:9901api/v1/price?ts=1667457091`
+- average: `http://127.0.0.1:9901/api/v1/average?&from=1569484800&until=1569492000&granularity=1s`  
+<sup>The ports is defined in docker-compose.yaml</sup>
 
 ## Commands
 `make build-n-up`: build the docker images and run the system via docker-compose  
