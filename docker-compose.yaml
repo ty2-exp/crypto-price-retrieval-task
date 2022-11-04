@@ -1,0 +1,41 @@
+version: "2"
+
+services:
+  datasource-gw:
+    image: ty2/datasource-gw:dev
+    env_file:
+      - docker-compose.env
+    networks:
+      ty2_cti:
+        ipv4_address: 172.88.0.11
+  binance-datasource:
+    image: ty2/binance-datasource:dev
+    env_file:
+      - docker-compose.env
+    networks:
+      ty2_cti:
+        ipv4_address: 172.88.0.12
+  influxdb-datasource:
+    image: ty2/influxdb-datasource:dev
+    env_file:
+      - docker-compose.env
+    networks:
+      ty2_cti:
+        ipv4_address: 172.88.0.13
+  price-periodic-collector:
+    image: ty2/price-periodic-collector:dev
+    env_file:
+      - docker-compose.env
+    depends_on:
+      - binance-datasource
+    networks:
+      ty2_cti:
+        ipv4_address: 172.88.0.14
+networks:
+  ty2_cti:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.88.0.0/24
+          gateway: 172.88.0.1

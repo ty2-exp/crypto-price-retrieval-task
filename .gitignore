@@ -1,0 +1,7 @@
+/*.iml
+/.idea
+/bin
+/set-local-env.sh
+/test-coverage.html
+/test-coverage.out
+/docker-compose.env
