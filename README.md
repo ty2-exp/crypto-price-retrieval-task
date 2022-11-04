@@ -68,7 +68,7 @@ Endpoints:
   - query strings:
     - from (required): from timestamp in unix time format
     - until (required): until timestamp in unix time format
-    - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
+    - granularity (optional): data granularity (available options: 1s,1m,1h,1d,1M)
 
 #### datasource
 Endpoints:
@@ -81,4 +81,4 @@ Endpoints:
       - symbol (required): crypto trading pair (e.g. BTCUSD, ETHUSD)
       - from (required): from timestamp in unix time format
       - until (required): until timestamp in unix time format
-      - granularity (optional): data granularity (available option: 1s,1m,1h,1d,1M)
+      - granularity (optional): data granularity (available options: 1s,1m,1h,1d,1M)
